@@ -21,8 +21,8 @@ const CountryDetails = () => {
 
     return (
         <div>
-            <h2>Details of : {detail[0].capital} </h2>
-            {/* <h3>Region : {region}</h3>
+            {/* <h2>Details of : {detail[0].capital} </h2>
+            <h3>Region : {region}</h3>
             <h3>Sub Region : {subregion}</h3>
             <h3>Capital : {capital}</h3>
             <h3>Currency : {currencies[0].name}</h3>

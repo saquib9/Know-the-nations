@@ -8,27 +8,27 @@ const CountryDetails = () => {
     const [detail, setDetail] = useState([]);
 
     useEffect(()=>{
-        const url = `https://restcountries.eu/rest/v2/name/Afghanistan`
+        const url = `https://restcountries.eu/rest/v2/name/${naming}`
         fetch(url)
-        .then(res => res.json())
-        .then(data => setDetail(data))
-    },[naming])
+            .then(res => res.json())
+            .then(data => setDetail(data))
+    },[])
     
-    console.log(detail[0])
-    debugger;
-
-    //let { name, region, subregion, capital, currencies, languages } = detail[0];
-
     return (
         <div>
-            <h2>Details of : {detail[0].capital} </h2>
-            {/* <h3>Region : {region}</h3>
-            <h3>Sub Region : {subregion}</h3>
-            <h3>Capital : {capital}</h3>
-            <h3>Currency : {currencies[0].name}</h3>
-            <h3>Language : {languages[0].name} ({languages[0].nativeName})</h3> */}
+            {detail.length !== 0 && detail.map ( data => 
+                        <>
+                        <h2>Details of : {data.capital} </h2>
+                        <h3>Region : {data.region}</h3>
+                        <h3>Sub Region : {data.subregion}</h3>
+                        <h3>Capital : {data.capital}</h3>
+                        <h3>Currency : {data.currencies[0].name}</h3>
+                        <h3>Language : {data.languages[0].name} ({data.languages[0].nativeName})</h3>
+                        </>
+            )}
         </div>
     );
+    debugger;
 };
 
 export default CountryDetails;

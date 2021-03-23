@@ -20,18 +20,6 @@ const Countries = (props) => {
         borderRadius : '15px'
     }
 
-    // let { naming } = useParams();
-
-    // const [detail, setDetail] = useState([]);
-
-    // useEffect(()=>{
-    //     fetch(`https://restcountries.eu/rest/v2/name/${naming}`)
-    //     .then(res => res.json())
-    //     .then(data => setDetail(data))
-    // },[])
-    
-    // console.log(detail)
-
     return (
         <div>
             {

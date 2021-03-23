@@ -8,7 +8,7 @@ const CountryDetails = () => {
     const [detail, setDetail] = useState([]);
 
     useEffect(()=>{
-        const url = `https://restcountries.eu/rest/v2/name/Afghanistan`
+        const url = `https://restcountries.eu/rest/v2/name/${naming}`
         fetch(url)
         .then(res => res.json())
         .then(data => setDetail(data))
